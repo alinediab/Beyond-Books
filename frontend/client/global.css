@@ -1,0 +1,174 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme - BeyondBooks Platform
+   * Color Palette:
+   * - #EFECE3 (HSL: 45, 27%, 91%) - Light beige/cream
+   * - #8FABD4 (HSL: 216, 45%, 70%) - Light blue
+   * - #4A70A9 (HSL: 216, 39%, 48%) - Darker blue
+   * - #000000 (HSL: 0, 0%, 0%) - Black
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+  */
+  :root {
+    --background: 45 27% 91%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Primary: Darker blue */
+    --primary: 216 39% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light blue */
+    --secondary: 216 45% 70%;
+    --secondary-foreground: 0 0% 0%;
+
+    /* Muted: Light beige */
+    --muted: 45 27% 91%;
+    --muted-foreground: 216 39% 48%;
+
+    /* Accent: Light blue */
+    --accent: 216 45% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive: red */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 27% 85%;
+    --input: 0 0% 100%;
+    --ring: 216 39% 48%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 216 39% 48%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 216 45% 70%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 216 45% 70%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 216 39% 40%;
+    --sidebar-ring: 216 45% 70%;
+
+    /* BeyondBooks color palette */
+    --beyond-cream: 45 27% 91%;
+    --beyond-light-blue: 216 45% 70%;
+    --beyond-blue: 216 39% 48%;
+    --beyond-black: 0 0% 0%;
+
+    /* Extended warm palette based on new colors */
+    --warm-50: 45 27% 97%;
+    --warm-100: 45 27% 94%;
+    --warm-200: 45 27% 88%;
+    --warm-300: 216 45% 75%;
+    --warm-400: 216 45% 70%;
+    --warm-500: 216 39% 48%;
+    --warm-600: 216 39% 42%;
+    --warm-700: 216 39% 35%;
+    --warm-800: 0 0% 0%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 45 27% 91%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 45 27% 91%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 45 27% 91%;
+
+    --primary: 216 45% 70%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 216 39% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 216 45% 70%;
+
+    --accent: 216 45% 70%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 216 45% 70%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 45 27% 91%;
+    --sidebar-primary: 216 45% 70%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 216 45% 70%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 216 45% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+  }
+
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+}
