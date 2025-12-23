@@ -1,4 +1,4 @@
-# Beyond Books
+<img width="1264" height="317" alt="image" src="https://github.com/user-attachments/assets/703111c7-7f27-4799-9d07-d86df34b6d30" /># Beyond Books
 
 Beyond Books is a full-stack university platform supporting non-academic student activities, including:
 
@@ -9,6 +9,12 @@ Beyond Books is a full-stack university platform supporting non-academic student
 - Multiple roles including Student, Professor, and Student Affairs Officer, each with its own permissions
 
 ---
+
+## Contributors
+
+- **Aline Diab** — [@alinediab](https://github.com/alinediab)
+- **Karim Nehme** — [@karim-nehme](https://github.com/karim-nehme)
+
 
 ## Project Structure
 
